@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .hamburger-line {
+        @apply block w-6 h-[2px] my-2 bg-pink-500;
+    }
+}
+@layer utilities {
+    .navbar-scroll {
+        @apply bg-white border-b ;
+    }
+    
+    .hover-up {
+        @apply hover:-translate-y-1 transition-all duration-200;
+    }
+
+}
