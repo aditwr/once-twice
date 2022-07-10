@@ -4,7 +4,7 @@
 
 @layer components {
   .hamburger-line {
-    @apply my-2 block h-[2px] w-6 bg-pink-500;
+    @apply my-2 block h-[2px] w-6 origin-top-left bg-pink-500;
   }
 }
 @layer utilities {
@@ -22,5 +22,14 @@
 
   .hover-up {
     @apply transition-all duration-200 hover:-translate-y-1;
+  }
+  .hamburger-active > span:nth-child(1) {
+    @apply w-7 rotate-[43deg];
+  }
+  .hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+  }
+  .hamburger-active > span:nth-child(3) {
+    @apply w-7 -rotate-45;
   }
 }

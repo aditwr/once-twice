@@ -16,6 +16,7 @@ setTimeout(() => {
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const mobileNav = document.querySelector(".mobile-nav");
 hamburgerMenu.addEventListener("click", function () {
+  hamburgerMenu.classList.toggle("hamburger-active");
   mobileNav.classList.toggle("hidden");
 });
 
