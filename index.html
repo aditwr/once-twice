@@ -23,8 +23,8 @@
         <div class="navbar w-full h-16 fixed top-0 flex items-center border-transparent justify-center z-50 transition-all duration-300">
             <div class="h-full w-full relative md:w-7/12 xl:w-4/12">
                 <!-- Hamburger Menu Start -->
-                <div class="w-full h-full flex justify-center items-center md:hidden">
-                    <div class="hamburger-menu p-1 absolute right-2">
+                <div class=" w-full h-full flex justify-center items-center md:hidden">
+                    <div class="hamburger-menu p-1 absolute right-2 z-[200]">
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
                         <span class="hamburger-line"></span>
@@ -50,14 +50,30 @@
                         </li>
                     </ul>
                 </nav>
+                <nav class="mobile-nav md:hidden fixed top-0 w-full h-full bg-slate-100 hidden items-center z-[150]">
+                    <ul class="flex flex-col items-center justify-center gap-4 w-full h-full text-pink-500">
+                        <li class="flex items-center">
+                            <a href="#home" class="text-base font-medium hover:text-white nav-link">HOME</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a href="#news" class="text-base font-medium hover:text-white nav-link">NEWS</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a href="#profile" class="text-base font-medium hover:text-white nav-link">PROFILE</a>
+                        </li>
+                        <li class="flex items-center">
+                            <a href="#discography" class="text-base font-medium hover:text-white nav-link">DISCOGRAPHY</a>
+                        </li>
+                    </ul>
+                </nav>
                 <img src="dist/img/twice_logo.png" alt="" class="w-16 scale-125 md:hidden absolute left-0 top-0">
             </div>
         </div>
 
-        <div class="w-full translate-y-[30%] backdrop-blur py-3">
+        <div class="w-full translate-y-[30%] backdrop-blur py-3 xl:py-6">
             <div class="w-full h-full text-center">
                 <h1 class="text-7xl sm:text-9xl lg:text-[11rem] xl:text-[16rem] text-pink-300 font-poiredOne">Celebrate</h1>
-                <h3 class="text-xl sm:text-3xl lg:text-4xl xl:text-5xl text-white font-viaodaLibre italic tracking-wider">2022.7.27 Release</h3>
+                <h3 class="text-xl sm:text-3xl lg:text-4xl xl:text-4xl text-white font-viaodaLibre italic tracking-widest">2022.7.27 Release</h3>
             </div>
         </div>
 
@@ -146,11 +162,22 @@
         </div>
 
         <!-- Bottom Sign Animation -->
-        <div class="absolute bottom-0 aspect-square w-32 flex justify-center">
+        <div class="absolute hidden bottom-0 aspect-square w-32 flex justify-center">
             <div class="w-[3px] h-1/2 bg-pink-500 animate-bounce"></div>
         </div>
+        <p class="scroll"></p>
     </header>
     <!-- Header & Home End -->
+
+    <!-- Page Load Animation -->
+    <div class="bg-page-load fixed top-0 w-full h-full z-[100] bg-zinc-800 flex items-center">
+        <div class="w-full text-center">
+            <h1 class="text-7xl sm:text-9xl lg:text-[11rem] xl:text-[16rem] text-pink-300 font-poiredOne">Celebrate</h1>
+            <h3 class="text-xl sm:text-3xl lg:text-4xl xl:text-4xl text-white font-viaodaLibre italic tracking-widest">2022.7.27 Release</h3>
+        </div>
+    </div>
+    <div class="front-page-load fixed top-0 w-full h-full z-[110] bg-transparent animate-blur"></div>
+    <div class="light-page-load fixed top-0 w-full h-full bg-white z-[110] hidden"></div>
     
     <!-- Latest Content Section Start -->
     <section class="pt-16 pb-8 relative z-40 bg-slate-50">
@@ -168,7 +195,7 @@
            <div class="grid lg:grid-cols-3 gap-6 py-6 lg:py-8">
                <div class="w-full hover-up group">
                     <a href="https://www.youtube.com/watch?v=i0p1bmr0EmE" class="">
-                        <div class="aspect-video flex justify-center items-center overflow-hidden bg-slate-200 animate-pulse p-0">
+                        <div class="aspect-video flex justify-center items-center overflow-hidden bg-slate-200 p-0">
                             <img src="dist/img/twice_what-is-love.jpg" alt="" class="object-cover w-full">
                         </div>
                     </a>
@@ -178,7 +205,7 @@
                </div>
                <div class="w-full hover-up group">
                     <a href="https://www.youtube.com/watch?v=i0p1bmr0EmE" class="">
-                        <div class="aspect-video flex justify-center items-center overflow-hidden bg-slate-200 animate-pulse p-0">
+                        <div class="aspect-video flex justify-center items-center overflow-hidden bg-slate-200 p-0">
                             <img src="dist/img/twice_likey.jpg" alt="" class="object-cover w-full">
                         </div>
                     </a>
@@ -188,7 +215,7 @@
                </div>
                <div class="w-full hover-up group">
                     <a href="https://www.youtube.com/watch?v=i0p1bmr0EmE" class="">
-                        <div class="aspect-video flex justify-center items-center overflow-hidden bg-slate-200 animate-pulse p-0">
+                        <div class="aspect-video flex justify-center items-center overflow-hidden bg-slate-200 p-0">
                             <img src="dist/img/twice_the-feels.jpg" alt="" class="object-cover w-full">
                         </div>
                     </a>
@@ -392,7 +419,7 @@
     <!-- Discography Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="bg-[url('dist/img/hero1.jpg')] bg-cover bg-fixed bg-top" style="background-image: url('dist/img/hero1.jpg')">
+    <section id="about" class="bg-[url('dist/img/hero1.png')] bg-cover bg-fixed bg-top" style="background-image: url('dist/img/hero1.png')">
         <div class="container mx-auto py-16 flex justify-center">
             <div class="max-w-xl text-white">
                 <h2 class="text-center text-3xl sm:text-4xl font-bold mb-5">About TWICE</h2>

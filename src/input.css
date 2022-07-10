@@ -12,6 +12,14 @@
     @apply border-b border-slate-100 bg-white;
   }
 
+  .scroll {
+    @apply fixed bottom-0 left-1/2 z-50 h-[70px] w-[2px];
+  }
+  .scroll:after {
+    content: "";
+    @apply absolute top-0 block h-full w-full animate-scroll bg-white;
+  }
+
   .hover-up {
     @apply transition-all duration-200 hover:-translate-y-1;
   }

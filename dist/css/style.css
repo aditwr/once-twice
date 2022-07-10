@@ -611,8 +611,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   z-index: 50;
 }
 
+.z-\[200\] {
+  z-index: 200;
+}
+
+.z-\[150\] {
+  z-index: 150;
+}
+
 .z-10 {
   z-index: 10;
+}
+
+.z-\[100\] {
+  z-index: 100;
+}
+
+.z-\[110\] {
+  z-index: 110;
 }
 
 .z-40 {
@@ -790,12 +806,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.aspect-video {
-  aspect-ratio: 16 / 9;
-}
-
 .aspect-square {
   aspect-ratio: 1 / 1;
+}
+
+.aspect-video {
+  aspect-ratio: 16 / 9;
 }
 
 .h-screen {
@@ -810,6 +826,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 100%;
 }
 
+.h-1\/2 {
+  height: 50%;
+}
+
 .h-1 {
   height: 0.25rem;
 }
@@ -820,10 +840,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-\[calc\(100\%-theme\(\"spacing\.1\"\)\)\] {
   height: calc(100% - 0.25rem);
-}
-
-.h-1\/2 {
-  height: 50%;
 }
 
 .min-h-\[56px\] {
@@ -854,24 +870,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 2.5rem;
 }
 
-.w-1\/2 {
-  width: 50%;
-}
-
 .w-32 {
   width: 8rem;
 }
 
-.w-1 {
-  width: 0.25rem;
-}
-
-.w-\[2px\] {
-  width: 2px;
-}
-
 .w-\[3px\] {
   width: 3px;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-1 {
+  width: 0.25rem;
 }
 
 .max-w-xl {
@@ -1047,6 +1059,80 @@ Ensure the default browser behavior of the `hidden` attribute.
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+@-webkit-keyframes blur {
+  0% {
+    -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+  }
+
+  30% {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+
+  60% {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+
+  100% {
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+  }
+}
+
+@keyframes blur {
+  0% {
+    -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+  }
+
+  30% {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+
+  60% {
+    -webkit-backdrop-filter: blur(0);
+            backdrop-filter: blur(0);
+  }
+
+  100% {
+    -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+  }
+}
+
+.animate-blur {
+  -webkit-animation: blur 3.6s ease-in;
+          animation: blur 3.6s ease-in;
+}
+
+@-webkit-keyframes downOpacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes downOpacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-downOpacity {
+  -webkit-animation: downOpacity .5s ease-in;
+          animation: downOpacity .5s ease-in;
 }
 
 .touch-auto {
@@ -1895,29 +1981,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(241 245 249 / var(--tw-bg-opacity));
 }
 
-.bg-slate-50 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
-}
-
-.bg-red-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
-}
-
 .bg-pink-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(236 72 153 / var(--tw-bg-opacity));
 }
 
-.bg-slate-900 {
+.bg-zinc-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+  background-color: rgb(39 39 42 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-slate-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
 .bg-slate-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
+.bg-slate-900 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .bg-zinc-700 {
@@ -1935,17 +2030,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
-}
-
-.bg-\[url\(\'\/dist\/img\/hero1\.png\'\)\] {
-  background-image: url('/dist/img/hero1.png');
-}
-
-.bg-\[url\(\'\/dist\/img\/hero1\.jpg\'\)\] {
-  background-image: url('/dist/img/hero1.jpg');
+.bg-\[url\(\'dist\/img\/hero1\.png\'\)\] {
+  background-image: url('dist/img/hero1.png');
 }
 
 .bg-\[url\(\'\.\.\.\'\)\] {
@@ -2373,6 +2459,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-variant-numeric: var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction);
 }
 
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
+
 .tracking-wider {
   letter-spacing: 0.05em;
 }
@@ -2788,6 +2878,61 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.scroll {
+  position: fixed;
+  bottom: 0px;
+  left: 50%;
+  z-index: 50;
+  height: 70px;
+  width: 2px;
+}
+
+.scroll:after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 100%;
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    height: 0;
+  }
+
+  50% {
+    height: 100%;
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scroll:after {
+  -webkit-animation: scroll 1.2s linear 0s infinite;
+          animation: scroll 1.2s linear 0s infinite;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 .hover-up {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3178,12 +3323,17 @@ Ensure the default browser behavior of the `hidden` attribute.
     width: 33.333333%;
   }
 
+  .xl\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
   .xl\:text-\[16rem\] {
     font-size: 16rem;
   }
 
-  .xl\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
+  .xl\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
